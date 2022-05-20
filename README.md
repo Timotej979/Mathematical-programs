@@ -1,7 +1,7 @@
 # Mathematical-programs
 Simple mathematical programs created in free time.
 
-C programming language:
+**_C programming language:_**
     
   - **Taylor series** calculates the series upon given function and percision.
 
@@ -10,7 +10,7 @@ C programming language:
   - **SumOfNaturalNum** calculates partial sums of n given natural numbers and aproximates a parabola using least squares theorem for sequential natural numbers with partial sums of the given natural number. Then it caluculates the difference between the computed value and theorethical value of -1/12.
 
 
-Numerical methods in Matlab:
+**_Numerical methods in Matlab:_**
   
   - **LU decomposition** with direct and reverse insertion with tridiagonal version of those.
     
