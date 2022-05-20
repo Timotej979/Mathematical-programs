@@ -32,7 +32,7 @@ int main(){
 
 
     while(1){
-        printf("\n  Koliko naravnih stevil sestejem za aproksimacijo vsote (nic = IZHOD):\n       ");
+        printf("\n  How many natural numbers should i add up for sum aproximation (zero = EXIT):\n       ");
         scanf("%Ld", &cleni);
         printf("\n ------------------------------------------------------------------------------------------------------------------------------------------");
 
@@ -52,13 +52,13 @@ int main(){
             quadmath_snprintf(strDLS, sizeof strDLS, "%.34Qf", deltaLS);
 
 
-            printf("  Definirana vsota naravnih stevil je:\n");
+            printf("  Defined sum of all natural numbers is:\n");
             printf("    %s\n ------------------------------------------------------------------------------------------------------------------------------------------\n", strDS);
 
-            printf("  Izracunana vsota naravnih stevil s %lli cleni preko kvadratne aproksimacije je:\n", cleni);
+            printf("  Calculated sum of all natural numbers with %lli parts aproximated via quadratic aproximation is:\n", cleni);
             printf("    %s\n ------------------------------------------------------------------------------------------------------------------------------------------\n", strLS);
 
-            printf("  Razlika med aproksimativno vrednostjo kvadratne funkcije v x=0 in definirano vsoto je:\n");
+            printf("  Difference between aproximated value of a quadratic function in x=0 and defined sum is:\n");
             printf("    %s\n ------------------------------------------------------------------------------------------------------------------------------------------\n", strDLS);
 
             leastSquaresA = 0.0q;
@@ -68,7 +68,7 @@ int main(){
             deltaLS = 0.0q;
 
         } else{
-            printf("Hvala za uporabo programa");
+            printf("Thanks for using my program");
             return 0;
         }
     }
@@ -116,6 +116,6 @@ void LS(long long cleni){
     quadmath_snprintf(strB, sizeof strB, "%.34Qf", leastSquaresB);
     quadmath_snprintf(strC, sizeof strC, "%.34Qf", leastSquaresC);
 
-    printf("\n  Enacba za kvadratno aproksimacijo je:\n");
+    printf("\n  Equation for quadratic aproximation is:\n");
     printf("    y = %s X^2 + %s X + %s\n ------------------------------------------------------------------------------------------------------------------------------------------\n", strA, strB, strC);
 }
