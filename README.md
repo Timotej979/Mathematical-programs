@@ -23,3 +23,20 @@ Simple mathematical programs created in free time.
   - **Tangent method** for finding zeroes of a function
 
   - **Newton method** for finding function intersections
+
+  - **Euler method** for solving DE y' = f(x, y)
+
+  - **Modified Euler method** for solving DE y' = f(x, y)
+
+  - **Leapfrog method** for solving DE y' = f(x, y)
+
+  - **Runge-Kutta method of 4-th order** for solving DE y' = f(x, y)
+
+  - **Trapezoidal rule** for solving DE y' = f(x, y)
+
+  - **Methods for numerical integration** for numerical calculation of integrals
+    - Rectangular rule
+    - Trapezoidal rule
+    - Simpson 1/3 rule
+    - Simpson 3/8 rule
+    - Romberg method 
