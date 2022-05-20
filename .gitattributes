@@ -1,1 +1,10 @@
 static/* linguist-vendored
+
+Bisection_for_function_zeros/*.m linguist-language=matlab
+LU_decomposition_with_direct_and_reverse_insertion/*.m linguist-language=matlab
+LU_decomposition_with_pivoting/*.m linguist-language=matlab
+Newton_method_for_finding_function_intersections/*.m linguist-language=matlab
+Secant_method_for_function_zeros/*.m linguist-language=matlab
+Tangent_method_for_function_zeros/*.m linguist-language=matlab
+Tridiagonal_insertion_for_LU_decomposition/*.m linguist-language=matlab
+Cholesky_decomposition_for_tridiagonal_symetric_positive_definite_matrix/*.m linguist-language=matlab
