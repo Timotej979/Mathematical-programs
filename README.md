@@ -1,7 +1,7 @@
 # Mathematical-programs
 Simple mathematical programs created in free time.
 
-**_C programming language:_**
+**_C programming language (Using 128 bit floating point percission):_**
     
   - **Taylor series** calculates the series upon given function and percision.
 
