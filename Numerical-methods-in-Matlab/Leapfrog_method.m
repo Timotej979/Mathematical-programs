@@ -1,8 +1,8 @@
-% Modified Euler method for solving DE
+% Leapfrog method for solving DE
 
-function y = modified_euler_method(f, a, b, n, y0)
-    % Algorithm solves a starting point problem y' = f(x,y) with modified Euler method
-    % USAGE: y = modified_euler_method(F, A, B, N, Y0);
+ function y = leapfrog_method(f, a, b, n, y0)
+    % Algorithm solves a starting point problem y' = f(x,y) with leapfrog method
+    % USAGE: y = leapfrog_method(F, A, B, N, Y0);
     % INPUT DATA:
     % F is a given right-sided function
     % A, B are limits of DE
@@ -16,11 +16,12 @@ function y = modified_euler_method(f, a, b, n, y0)
     x = linspace(a,b,n+1);
     y = zeros(length(y0),n+1);
     y(:,1) = y0(:);
+    % First aproximation calculated with Euler method
+    z = modeuler(f,a,a+h,1,y0);
+    y(:,2) = z(:,end);
     % Solving starting point problem
-    for i = 2:n+1
-      k1 = f(x(i-1),y(:,i-1));
-      k2 = f(x(i-1)+h/2,y(:,i-1)+h*k1(:)/2);
-      y(:,i) = y(:,i-1)+h*k2(:);
+    for i = 3:n+1
+      y(:,i) = y(:,i-2)+2*h*f(x(i-1),y(:,i-1));
     end
     % y = y(1,end);
 end

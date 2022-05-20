@@ -1,8 +1,8 @@
-% Modified Euler method for solving DE
+% Trapezoidal rule for solving DE
 
-function y = modified_euler_method(f, a, b, n, y0)
-    % Algorithm solves a starting point problem y' = f(x,y) with modified Euler method
-    % USAGE: y = modified_euler_method(F, A, B, N, Y0);
+function y = trapezoidal_rule(f, a, b, n, y0)
+    % Algorithm solves a starting point problem y' = f(x,y) with trapezoidal(implicit) rule
+    % USAGE: y = trapezoidal_rule(F, A, B, N, Y0);
     % INPUT DATA:
     % F is a given right-sided function
     % A, B are limits of DE
@@ -10,6 +10,7 @@ function y = modified_euler_method(f, a, b, n, y0)
     % Y0 starting point value in point a
     % OUTPUT DATA:
     % y aproximated value of function F in point B
+
     
     % Interval spliting
     h = (b-a)/n;
@@ -18,9 +19,14 @@ function y = modified_euler_method(f, a, b, n, y0)
     y(:,1) = y0(:);
     % Solving starting point problem
     for i = 2:n+1
-      k1 = f(x(i-1),y(:,i-1));
-      k2 = f(x(i-1)+h/2,y(:,i-1)+h*k1(:)/2);
-      y(:,i) = y(:,i-1)+h*k2(:);
+      z = y(:,i-1);
+      for k = 1:100
+        y(:,i) = y(:,i-1)+h/2*(f(x(i-1),y(:,i-1))+f(x(i),z));
+        if abs((y(:,i)-z)/y(:,i)) < 1e-10
+            break;
+        end
+        z = y(:,i);
+      end
     end
     % y = y(1,end);
 end
