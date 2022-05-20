@@ -22,7 +22,7 @@ int main()
 
 
     while(1){
-        printf("\n  Taylorjeva series for function:\n    -e^x (1)\n    -sin(x) (2)\n    -cos(x) (3)\n    -log(1 + x) developed around number 0 (4)\n    -Exit the program (5)\n------------------------------\n  Input your pick:\n   ");
+        printf("\n  Taylor series for function:\n    -e^x (1)\n    -sin(x) (2)\n    -cos(x) (3)\n    -log(1 + x) developed around number 0 (4)\n    -Exit the program (5)\n------------------------------\n  Input your pick:\n   ");
         scanf("%d", &stikalo);
 
         if(stikalo != 5){
