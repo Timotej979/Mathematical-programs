@@ -18,3 +18,8 @@ Simple mathematical programs created in free time.
     
   - **Bisection** for finding zeroes of a function
     
+  - **Secant method** for finding zeroes of a function
+
+  - **Tangent method** for finding zeroes of a function
+
+  - **Newton method** for finding function intersections
